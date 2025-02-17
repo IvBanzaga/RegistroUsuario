@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorAzul"
-    tools:context=".MainActivity">ff
+    tools:context=".RegisterActivity">
 
     <!-- Toolbar -->
 
@@ -16,20 +16,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="@string/app_name"
+        app:title="@string/app_registro"
         app:titleMarginStart="50dp"
         app:navigationIcon="@drawable/android"
         />
 
     <EditText
         style="@style/EditText"
-        android:id="@+id/txt_user"
+        android:id="@+id/editTextUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="68dp"
         android:ems="10"
         android:inputType="text"
-        android:hint="@string/txt_user"
+        android:hint="@string/txt_nombreUsuario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,42 +37,44 @@
 
     <EditText
         style="@style/EditText"
-        android:id="@+id/txt_password"
+        android:id="@+id/editTextName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:inputType="text"
-        android:hint="@string/txt_pasword"
+        android:hint="@string/txt_nombre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_user" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextUsername" />
 
-    <Button
-        android:id="@+id/btn_inicio"
-        style="@style/Button"
-        android:layout_width="130dp"
+    <EditText
+        style="@style/EditText"
+        android:id="@+id/editTextPassword"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
-        android:backgroundTint="#2BA931"
-        android:hint="@string/btn_incio"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/txt_passwordUsuario"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.234"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_password" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
 
     <Button
-        android:id="@+id/btn_registrar"
+        android:id="@+id/btn_registrarUsuario"
         style="@style/Button"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
-        android:backgroundTint="#202E4E"
-        android:hint="@string/btn_registrar"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#2BA931"
+        android:hint="@string/btn_registrarUsuario"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.211"
-        app:layout_constraintStart_toEndOf="@+id/btn_inicio"
-        app:layout_constraintTop_toBottomOf="@+id/txt_password" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,29 @@
 <resources>
+    <!-- Pantalla de Inicio -->
     <string name="app_name">CONTROL DE USUARIOS</string>
-    <string name="direc_url">Dirección URL</string>
     <string name="txt_user">Usuario</string>
     <string name="txt_pasword">Contraseña</string>
     <string name="btn_incio">Inicio</string>
     <string name="btn_registrar">Resgitrar</string>
+
+
+    <!-- Registro de Usuarios -->
+    <string name="app_registro">REGISTRO DE USUARIOS</string>
+    <string name="txt_nombreUsuario">Usuario</string>
+    <string name="txt_nombre">Nombre</string>
+    <string name="txt_passwordUsuario">Contraseña</string>
+    <string name="btn_registrarUsuario">Resgitrar</string>
+
+    <!-- Lista de usuarios -->
+    <string name="app_lista_usuarios">Lista de Usuarios</string>
+    <string name="btn_volver_incio">Volver</string>
+
+    <!-- Detalles de los usuarios -->
+    <string name="app_detalle_usuario">Detalles del Usuario</string>
+
+
+
+    <!-- Fragmentos donde estan -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
 </resources>
