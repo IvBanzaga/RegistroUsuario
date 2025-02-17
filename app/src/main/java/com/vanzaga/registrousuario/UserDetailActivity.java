@@ -16,7 +16,12 @@ public class UserDetailActivity extends AppCompatActivity {
     private TextView textViewUsername;
     private TextView textViewName;
     private TextView textViewPassword;
+
+    // Declaración de variables
     private User user;
+
+    // Declaración de la lista de usuarios
+    private ArrayList<User> userList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +35,9 @@ public class UserDetailActivity extends AppCompatActivity {
 
         // Se obtiene el usuario de la actividad anterior y se muestran los datos en los TextView.
         user = (User) getIntent().getSerializableExtra("user");
+
+        // Se obtiene la lista de usuarios de la actividad anterior.
+        userList = (ArrayList<User>) getIntent().getSerializableExtra("userList");
 
         // Se verifica si el usuario no es nulo
         if (user != null) {
@@ -47,7 +55,7 @@ public class UserDetailActivity extends AppCompatActivity {
         Intent intent = new Intent(this, UserListActivity.class);
 
         // Se pasa la lista de usuarios a la actividad UserListActivity
-        intent.putExtra("user", user);
+        intent.putExtra("userList", userList);
 
         // Se inicia la actividad UserListActivity
         startActivity(intent);
