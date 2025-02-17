@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CONTROL DE USUARIOS</string>
+    <string name="direc_url">Dirección URL</string>
+    <string name="txt_user">Usuario</string>
+    <string name="txt_pasword">Contraseña</string>
+    <string name="btn_incio">Inicio</string>
+    <string name="btn_registrar">Resgitrar</string>
+</resources>
