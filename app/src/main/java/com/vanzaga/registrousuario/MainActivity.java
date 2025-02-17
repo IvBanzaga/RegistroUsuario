@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
 
         // Inicializar la lista de usuarios con algunos usuarios predefinidos
         userList = new ArrayList<>();
-        userList.add(new User("Admin", "Admin", "123456@A"));
-        userList.add(new User("User1", "User primero", "123456"));
-        userList.add(new User("User2", "User segundo", "123456"));
+        userList.add(new User("admin", "Admin", "123456@a"));
+        userList.add(new User("user1", "User primero", "123456"));
+        userList.add(new User("user2", "User segundo", "123456"));
     }
 
     // Método para iniciar sesión

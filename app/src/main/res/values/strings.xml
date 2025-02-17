@@ -20,7 +20,9 @@
 
     <!-- Detalles de los usuarios -->
     <string name="app_detalle_usuario">Detalles del Usuario</string>
-
+    <string name="txt_DetalleNombreUsuario">Usuario</string>
+    <string name="txt_DetalleNombre">Nombre</string>
+    <string name="txt_DetallePasswordUsuario">Contraseña</string>
 
 
     <!-- Fragmentos donde estan -->

@@ -13,6 +13,8 @@ import java.util.List;
 
 public class UserListActivity extends AppCompatActivity {
 
+
+    // Declaramos las lista de usuarios y el ListView
     private ListView listView;
     private List<User> userList;
 
@@ -21,25 +23,41 @@ public class UserListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_list);
 
+        // Inicializamos el ListView
         listView = findViewById(R.id.listView);
 
+        // Obtenemos la lista de usuarios de la actividad anterior
         userList = (List<User>) getIntent().getSerializableExtra("userList");
 
+        if (userList == null) {
+            userList = new ArrayList<>();
+        }
+
+        // Creamos una lista de nombres de usuario
         List<String> usernames = new ArrayList<>();
+
+        // Recorremos la lista de usuarios y agregamos los nombres de usuario a la lista de nombres de usuario
         for (User user : userList) {
             usernames.add(user.getUsername());
         }
 
+        // Creamos un ArrayAdapter para mostrar la lista de nombres de usuario en el ListView
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, usernames);
+
+        // Establecemos el adaptador en el ListView
         listView.setAdapter(adapter);
 
+        // Establecemos un listener para el ListView, de manera que al hacer clic en un elemento se abra la actividad UserDetailActivity
         listView.setOnItemClickListener((parent, view, position, id) -> {
             Intent intent = new Intent(this, UserDetailActivity.class);
+
+            // Pasamos el usuario correspondiente a la posición seleccionada a la actividad UserDetailActivity
             intent.putExtra("user", userList.get(position));
             startActivity(intent);
         });
     }
 
+    // Método para volver a la actividad MainActivity
     public void volverAlInicio(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

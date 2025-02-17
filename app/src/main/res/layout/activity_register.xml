@@ -71,6 +71,7 @@
         android:layout_marginTop="36dp"
         android:backgroundTint="#2BA931"
         android:hint="@string/btn_registrarUsuario"
+        android:onClick="registrarUsuario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
