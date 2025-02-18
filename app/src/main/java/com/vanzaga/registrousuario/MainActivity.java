@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Intent para obtener la lista de usuarios de la actividad anterior
         Intent intent = getIntent();
+
         // userList es inicializada con la lista de usuarios obtenida del intent
         userList = (ArrayList<User>) intent.getSerializableExtra("userList");
 
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                     .append(user.getPassword())
                     .append("\n");
 
-            // Si el usuario y la contraseña ingresados coinciden con los de un usuario de la lista
+            // Si el usuario y la contraseña ingresados coinciden con los de un usuario de la lista, entonces iniciamos UserListActivity
             if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
                 Intent intent = new Intent(this, UserListActivity.class);
                 intent.putExtra("userList", userList);
@@ -74,11 +75,11 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
         }
-
+        // Si no se encuentra un usuario con los datos ingresados, se muestra un mensaje
         Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
     }
 
-    // Método para registrar un nuevo usuario
+    // Método para registrar un nuevo usuario y enviamos a RegisterActivity para añadir un nuevo usuario a userList
     public void registrar(View view) {
         Intent intent = new Intent(this, RegisterActivity.class);
         intent.putExtra("userList", new ArrayList<>(userList));
