@@ -5,6 +5,7 @@
     <string name="txt_pasword">Contraseña</string>
     <string name="btn_incio">Inicio</string>
     <string name="btn_registrar">Resgitrar</string>
+    <string name="Creado_por">Creado por:Iván Bazaga</string>
 
 
     <!-- Registro de Usuarios -->
