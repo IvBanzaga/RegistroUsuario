@@ -54,6 +54,14 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         }
 
+        // Verificar si la contraseña cumple con los requisitos
+        if (!isValidPassword(password)) {
+            Toast.makeText(this,
+                    "La contraseña debe tener al menos 8 caracteres, incluyendo una mayúscula, letras, números y algún carácter especial ($, %, &, @)",
+                    Toast.LENGTH_LONG).show();
+            return;
+        }
+
         // Recorremos la lista de usuarios y verificamos si el nombre de usuario ya existe
         for (User user : userList) {
             if (user.getUsername().equals(username)) {
@@ -76,5 +84,14 @@ public class RegisterActivity extends AppCompatActivity {
         intent.putExtra("userList", userList);
         startActivity(intent);
         finish();
+    }
+
+    // Método para verificar si la contraseña cumple con los requisitos
+    private boolean isValidPassword(String password) {
+        return password.length() >= 8 &&
+                password.matches(".*[A-Z].*") &&
+                password.matches(".*[a-z].*") &&
+                password.matches(".*[0-9].*") &&
+                password.matches(".*[$%&@].*");
     }
 }
